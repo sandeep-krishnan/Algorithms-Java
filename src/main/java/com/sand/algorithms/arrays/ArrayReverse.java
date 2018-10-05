@@ -1,5 +1,7 @@
 package com.sand.algorithms.arrays;
 
+import com.sand.algorithms.utils.ArrayUtils;
+
 import java.util.Arrays;
 
 public class ArrayReverse {
@@ -16,21 +18,7 @@ public class ArrayReverse {
     }
     int length = array.length;
     for (int i = 0; i < length / 2; i++) {
-      swap(array, i, length - 1 - i);
+      ArrayUtils.swap(array, i, length - 1 - i);
     }
-  }
-
-  public static <T> void swap(T[] array, int x, int y) {
-    if (array == null) {
-      return;
-    }
-
-    if (x > array.length || y > array.length) {
-      return;
-    }
-
-    T temp = array[x];
-    array[x] = array[y];
-    array[y] = temp;
   }
 }
